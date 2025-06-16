@@ -15,8 +15,8 @@ jobs:
 
       - name: Install tinyfeed
         run: |
-          curl -sL https://github.com/AnandChowdhary/tinyfeed/releases/latest/download/tinyfeed-linux-amd64 \
-            -o /usr/local/bin/tinyfeed && chmod +x /usr/local/bin/tinyfeed
+          curl -L https://github.com/TheBigRoomXXL/tinyfeed/releases/latest/download/tinyfeed-linux -o /usr/local/bin/tinyfeed
+          chmod +x /usr/local/bin/tinyfeed
 
       - name: Generate site (last 30 days)
         run: |
