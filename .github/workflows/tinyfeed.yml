@@ -17,6 +17,11 @@ jobs:
         run: |
           curl -L https://github.com/TheBigRoomXXL/tinyfeed/releases/latest/download/tinyfeed-linux-amd64 -o /usr/local/bin/tinyfeed
           chmod +x /usr/local/bin/tinyfeed
+          # Diagnóstico do arquivo baixado
+          echo "Verificando o tipo de arquivo:"
+          file /usr/local/bin/tinyfeed
+          echo "Primeiras linhas do arquivo (pode ser binário):"
+          head -n 5 /usr/local/bin/tinyfeed || true
 
       - name: Generate site (last 30 days)
         run: |
