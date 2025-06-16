@@ -35,8 +35,8 @@ jobs:
           tinyfeed \
             --input feeds.txt \
             --output public/index.html \
-            --limit 100 \
-            --limit-per-feed 20 \
+            --limit 500 \
+            --limit-per-feed 50 \
             --name "AI News Feed" \
             --description "A collection of AI and technology news feeds"
 
