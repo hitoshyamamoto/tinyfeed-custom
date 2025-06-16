@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>AI News Feed</title>
+
+	<meta http-equiv="Content-Security-Policy" content="
+		default-src 'none';
+		style-src 'nonce-rH2TsY39Ye_rIXmDICP017Z8tPYlj1NOM7r2J9zWmobS4NgkB_isG4iPjr4PHngjE3v-Fs8mWyFhVvIyWAzNkavRmCpMnkKb83S31nUukavA5_m1GBK6dQLlL40IuM8bCOvz6ooz37ntjSEAGCE5neqIFLsgd15Tx_JpXRDUl39JuHTGSxTlsM09A5BOAuxxEHcutIhQ-eGtxET0Iwcef7ST8BvbBluZ3my0Qwm0dLF9AOSthNvrgqoSZEbeubfteS9O_wjyc7MBypU3iqlmJG6w6elCwZN6-QZ8HklLh7ZV9IS5e1QD6XsX-1helqopPCgEL031bUM7oDgNgo2vQg==' ;
+    ">
+	<meta name="application-name" content="tinyfeed">
+	<meta name="application-source" content="https://github.com/TheBigRoomXXL/tinyfeed">
+	<meta name="author" content="Sebastien LOVERGNE">
+	<meta name="description" content="RSS, Atom and JSON feeds aggregator">
+	<meta name="referrer" content="same-origin">
+
+	<style nonce="rH2TsY39Ye_rIXmDICP017Z8tPYlj1NOM7r2J9zWmobS4NgkB_isG4iPjr4PHngjE3v-Fs8mWyFhVvIyWAzNkavRmCpMnkKb83S31nUukavA5_m1GBK6dQLlL40IuM8bCOvz6ooz37ntjSEAGCE5neqIFLsgd15Tx_JpXRDUl39JuHTGSxTlsM09A5BOAuxxEHcutIhQ-eGtxET0Iwcef7ST8BvbBluZ3my0Qwm0dLF9AOSthNvrgqoSZEbeubfteS9O_wjyc7MBypU3iqlmJG6w6elCwZN6-QZ8HklLh7ZV9IS5e1QD6XsX-1helqopPCgEL031bUM7oDgNgo2vQg==">
+		:root {
+			color-scheme: dark light;
+			--primary: #0AC8F5;
+			--secondary: #D2F00F;
+			--txt: #cfcfcf;
+			--bd: #c0c0c0;
+			--bg: #1D1F21;
+			font-size: min(calc(.5rem + 0.75vw), 16px);
+		}
+
+		@media (prefers-color-scheme: light) {
+			:root {
+				--txt: #444444;
+				--bd: #333333;
+				--bg: white;
+				--primary: #207D92;
+				--secondary: #6A7A06;
+			}
+		}
+
+		body {
+			font-family: Calibri, 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+			color: var(--txt);
+			background: var(--bg);
+			max-width: 50rem;
+			width: 100%;
+			margin: 0.5em auto 2em;
+			line-height: 1.25em;
+		}
+
+		header>h1 {
+			display: inline-block;
+			padding: 0 0.5em;
+			margin-bottom: 0.25em;
+		}
+
+		h2 {
+			font-size: 1rem;
+			display: inline;
+		}
+
+		ol {
+			padding-left: 5ch;
+		}
+
+		li {
+			margin-block-start: 1em;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:link {
+			color: var(--primary)
+		}
+
+		a:visited {
+			color: var(--secondary)
+		}
+
+		a:hover {
+			opacity: 0.8
+		}
+
+		small {
+			padding-top: 0.25rem;
+			font-size: 0.95rem;
+		}
+
+		small>a:link,
+		small>a:visited {
+			color: var(--txt);
+		}
+
+		footer {
+			padding: 2rem 1rem;
+		}
+
+		.feed-list {
+			display: flex;
+			flex-wrap: wrap;
+			border: 0.5px solid var(--bd);
+		}
+
+		.feed-list>div {
+			flex-grow: 1;
+			padding: 0.5em 0.5em 0.35em 0.5em;
+			text-align: center;
+			vertical-align: middle;
+			border: 0.5px solid var(--bd);
+		}
+	</style>
+
+	
+</head>
+
+<body>
+	<header>
+		<h1>AI News Feed</h1>
+		A collection of AI and technology news feeds
+	</header>
+	<hr>
+	<main>
+		<ol>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/ep167-top-20-ai-concepts-you-should target="_blank">
+					<h2>EP167: Top 20 AI Concepts You Should Know</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-14">2025-06-14</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/06/13/1118600/powering-next-gen-services-with-ai-in-regulated-industries/ target="_blank">
+					<h2>Powering next-gen services with AI in regulated industries</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-13">2025-06-13</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://deepmind.google/discover/blog/behind-ancestra-combining-veo-with-live-action-filmmaking/ target="_blank">
+					<h2>Behind “ANCESTRA”: combining Veo with live-action filmmaking</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-13">2025-06-13</time>
+					|
+					<a href="https://deepmind.google" target="_blank">deepmind.google</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://deepmind.google/discover/blog/behind-ancestra-combining-veo-with-live-action-filmmaking/ target="_blank">
+					<h2>Behind “ANCESTRA”: combining Veo with live-action filmmaking</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-13">2025-06-13</time>
+					|
+					<a href="https://deepmind.google" target="_blank">deepmind.google</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/nvidia-deutsche-telekom-germany-sovereign-ai/ target="_blank">
+					<h2>NVIDIA and Deutsche Telekom Partner to Advance Germany’s Sovereign AI</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-13">2025-06-13</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://stability.ai/news/stable-diffusion-35-models-optimized-with-tensorrt-deliver-2x-faster-performance-and-40-less-memory-on-nvidia-rtx-gpus target="_blank">
+					<h2>Stable Diffusion 3.5 Models Optimized with TensorRT Deliver 2X Faster Performance and 40% Less Memory on NVIDIA RTX GPUs</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://stability.ai" target="_blank">stability.ai</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/06/inspiring-creativity-that-brings-people-together/ target="_blank">
+					<h2>Inspiring Creativity That Brings People Together</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/database-schema-design-simplified target="_blank">
+					<h2>Database Schema Design Simplified: Normalization vs Denormalization</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.langchain.dev/the-hidden-metric-that-determines-ai-product-success/ target="_blank">
+					<h2>The Hidden Metric That Determines AI Product Success</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://blog.langchain.dev" target="_blank">blog.langchain.dev</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://deepmind.google/discover/blog/weather-lab-cyclone-predictions-with-ai/ target="_blank">
+					<h2>How we&#39;re supporting better tropical cyclone prediction with AI</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://deepmind.google" target="_blank">deepmind.google</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://deepmind.google/discover/blog/weather-lab-cyclone-predictions-with-ai/ target="_blank">
+					<h2>How we&#39;re supporting better tropical cyclone prediction with AI</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://deepmind.google" target="_blank">deepmind.google</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/06/creators-short-form-videos-and-messaging-are-disrupting-how-offline-retailers-sell-and-scale-in-india/ target="_blank">
+					<h2>Creators, Short-Form Videos, And Messaging Are Disrupting How Offline Retailers Sell And Scale In India</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/geforce-now-thursday-performance-day-pass-sale/ target="_blank">
+					<h2>Turn RTX ON With 40% Off Performance Day Passes</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/rtx-ai-garage-gtc-paris-tensorrt-rtx-nim-microservices/ target="_blank">
+					<h2>NVIDIA TensorRT Boosts Stable Diffusion 3.5 Performance on NVIDIA GeForce RTX and RTX PRO GPUs</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/06/taking-action-against-nudify-apps/ target="_blank">
+					<h2>Taking Action Against ‘Nudify’ Apps</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/06/12/1118189/ai-agents-manus-control-autonomy-operator-openai/ target="_blank">
+					<h2>Are we ready to hand AI agents the keys?</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/index/mattels-iconic-brands target="_blank">
+					<h2>Bringing the Magic of AI to Mattel’s Iconic Brands</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/hello-hf-kernels target="_blank">
+					<h2>Enhance Your Models in 5 Minutes with the Hugging Face Kernel Hub</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/inference-providers-featherless target="_blank">
+					<h2>Featherless AI on Hugging Face Inference Providers 🔥</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-12">2025-06-12</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=http://nvidianews.nvidia.com/news/nvidia-stockholder-meeting-set-for-june-25-individuals-can-participate-online target="_blank">
+					<h2>NVIDIA Stockholder Meeting Set for June 25; Individuals Can Participate Online</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://nvidianews.nvidia.com" target="_blank">nvidianews.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/06/edit-videos-with-meta-ai/ target="_blank">
+					<h2>You Can Now Edit Videos With Meta AI</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/shopify-tech-stack target="_blank">
+					<h2>Shopify Tech Stack</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/06/our-new-model-helps-ai-think-before-it-acts/ target="_blank">
+					<h2>Our New Model Helps AI Think Before it Acts</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/gtc-paris-2025/ target="_blank">
+					<h2>NVIDIA CEO Drops the Blueprint for Europe’s AI Boom</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/european-broadcasting-union-sovereign-ai/ target="_blank">
+					<h2>European Broadcasting Union and NVIDIA Partner on Sovereign AI to Support Public Broadcasters</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/ai-blueprint-telco-network-configuration/ target="_blank">
+					<h2>Calling on LLMs: New NVIDIA AI Blueprint Helps Automate Telco Network Configuration</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/smart-city-ai-blueprint-europe/ target="_blank">
+					<h2>NVIDIA Brings Physical AI to European Cities With New Blueprint for Smart City AI</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/retail-agentic-physical-ai/ target="_blank">
+					<h2>Retail Reboot: Major Global Brands Transform End-to-End Operations With NVIDIA</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/european-robot-makers-isaac-omniverse-halos-safe-physical-ai/ target="_blank">
+					<h2>European Robot Makers Adopt NVIDIA Isaac, Omniverse and Halos to Develop Safe, Physical AI-Driven Robot Fleets</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/auto-research-cvpr-2025/ target="_blank">
+					<h2>NVIDIA Scores Consecutive Win for End-to-End Autonomous Driving Grand Challenge at CVPR</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/europe-6g-research/ target="_blank">
+					<h2>European Researchers Develop AI-Native Wireless Networks With NVIDIA 6G Research Portfolio</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/cvpr-2025-ai-research-diffusionrenderer/ target="_blank">
+					<h2>NVIDIA Research Casts New Light on Scenes With AI-Powered Rendering for Physical AI Development</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/drive-full-stack-av-software-europe/ target="_blank">
+					<h2>NVIDIA DRIVE Full-Stack Autonomous Vehicle Software Rolls Out</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/europe-healthcare-ai-startups/ target="_blank">
+					<h2>Leading European Healthcare and Life Sciences Companies Innovate With NVIDIA AI</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/autonomous-vehicle-ecosystem-ai-models-developer-tools/ target="_blank">
+					<h2>NVIDIA Releases New AI Models and Developer Tools to Advance Autonomous Vehicle Ecosystem</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/ansys-dcai-quantum-computing/ target="_blank">
+					<h2>Go With the Flow: NVIDIA Teams With Ansys and DCAI to Advance Quantum Algorithms for Fluid Dynamics</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=http://nvidianews.nvidia.com/news/nvidia-partners-with-novo-nordisk-and-dcai-to-advance-drug-discovery target="_blank">
+					<h2>NVIDIA Partners With Novo Nordisk and DCAI to Advance Drug Discovery</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://nvidianews.nvidia.com" target="_blank">nvidianews.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/europe-financial-services-ai/ target="_blank">
+					<h2>European Financial Services Industry Goes All In on AI to Support Smarter Investments</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blogs.nvidia.com/blog/journey-to-quantum-computing/ target="_blank">
+					<h2>NVIDIA GB200 NVL72 Systems Accelerate the Journey to Useful Quantum Computing</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blogs.nvidia.com" target="_blank">blogs.nvidia.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/06/11/1118519/humanoids-safety-rules/ target="_blank">
+					<h2>Why humanoid robots need their own safety rules</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/06/11/1118233/amsterdam-fair-welfare-ai-discriminatory-algorithms-failure/ target="_blank">
+					<h2>Inside Amsterdam’s high-stakes experiment to create fair welfare AI</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.langchain.dev/benchmarking-multi-agent-architectures/ target="_blank">
+					<h2>Benchmarking Multi-Agent Architectures</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://blog.langchain.dev" target="_blank">blog.langchain.dev</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/nvidia-training-cluster target="_blank">
+					<h2>Introducing Training Cluster as a Service - a new collaboration with NVIDIA</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-11">2025-06-11</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/how-lyft-uses-ml-to-make-100-million target="_blank">
+					<h2>How Lyft Uses ML to Make 100 Million Predictions A Day</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-10">2025-06-10</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/06/accelerating-open-source-innovation-across-sub-saharan-africa-introducing-the-llama-impact-accelerator-program/ target="_blank">
+					<h2>Accelerating Open-Source Innovation Across Sub-Saharan Africa: Introducing the Llama Impact Accelerator Program</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-10">2025-06-10</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/06/10/1118229/pentagon-gutting-ai-test/ target="_blank">
+					<h2>The Pentagon is gutting the team that tests AI and weapons systems</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-10">2025-06-10</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.langchain.dev/langgraph-release-week-recap/ target="_blank">
+					<h2>LangGraph Release Week Recap</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-09">2025-06-09</time>
+					|
+					<a href="https://blog.langchain.dev" target="_blank">blog.langchain.dev</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/aws-weekly-roundup-new-aws-heroes-amazon-q-developer-ec2-gpu-price-reduction-and-more-june-9-2025/ target="_blank">
+					<h2>AWS Weekly Roundup: New AWS Heroes, Amazon Q Developer, EC2 GPU price reduction, and more (June 9, 2025)</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-09">2025-06-09</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/our-new-book-mobile-system-design target="_blank">
+					<h2>Our New Book, Mobile System Design Interview, Is Now Available</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-09">2025-06-09</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/index/scaling-coordinated-vulnerability-disclosure target="_blank">
+					<h2>Scaling security with responsible disclosure</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-09">2025-06-09</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/policies/outbound-coordinated-disclosure-policy target="_blank">
+					<h2>Outbound coordinated vulnerability disclosure policy</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-09">2025-06-09</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/ep166-what-is-event-sourcing target="_blank">
+					<h2>EP166: What is Event Sourcing? </h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-07">2025-06-07</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.anthropic.com/news/national-security-expert-richard-fontaine-appointed-to-anthropic-s-long-term-benefit-trust target="_blank">
+					<h2>National Security Expert Richard Fontaine appointed to Anthropic’s Long-Term Benefit Trust</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-06">2025-06-06</time>
+					|
+					<a href="https://anthropic.com" target="_blank">anthropic.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/now-open-aws-asia-pacific-taipei-region/ target="_blank">
+					<h2>Now open – AWS Asia Pacific (Taipei) Region</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-06">2025-06-06</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/screensuite target="_blank">
+					<h2>ScreenSuite - The most comprehensive evaluation suite for GUI Agents!</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-06">2025-06-06</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/introducing-aws-api-models-and-publicly-available-resources-for-aws-api-definitions/ target="_blank">
+					<h2>Introducing AWS API models and publicly available resources for AWS API definitions</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-05">2025-06-05</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/06/05/1117958/china-ai-agent-boom/ target="_blank">
+					<h2>Manus has kick-started an AI agent boom in China</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-05">2025-06-05</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/announcing-up-to-45-price-reduction-for-amazon-ec2-nvidia-gpu-accelerated-instances/ target="_blank">
+					<h2>Announcing up to 45% price reduction for Amazon EC2 NVIDIA GPU-accelerated instances</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-05">2025-06-05</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/index/response-to-nyt-data-demands target="_blank">
+					<h2>How we’re responding to The New York Times’ data demands in order to protect user privacy</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-05">2025-06-05</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.anthropic.com/news/claude-gov-models-for-u-s-national-security-customers target="_blank">
+					<h2>Claude Gov Models for U.S. National Security Customers</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-05">2025-06-05</time>
+					|
+					<a href="https://anthropic.com" target="_blank">anthropic.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/sql-vs-nosql-choosing-the-right-database target="_blank">
+					<h2>SQL vs NoSQL: Choosing the Right Database for An Application</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-05">2025-06-05</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/global-affairs/disrupting-malicious-uses-of-ai-june-2025 target="_blank">
+					<h2>Disrupting malicious uses of AI: June 2025</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-05">2025-06-05</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/introducing-our-newest-2025-aws-heroes-cohort/ target="_blank">
+					<h2>Introducing our newest 2025 AWS Heroes cohort</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-04">2025-06-04</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/06/04/1117753/whats-next-for-ai-and-math/ target="_blank">
+					<h2>What’s next for AI and math</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-04">2025-06-04</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/kv-cache target="_blank">
+					<h2>KV Cache from scratch in nanoVLM</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-04">2025-06-04</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://deepmind.google/discover/blog/advanced-audio-dialog-and-generation-with-gemini-25/ target="_blank">
+					<h2>Advanced audio dialog and generation with Gemini 2.5</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-03">2025-06-03</time>
+					|
+					<a href="https://deepmind.google" target="_blank">deepmind.google</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://deepmind.google/discover/blog/advanced-audio-dialog-and-generation-with-gemini-25/ target="_blank">
+					<h2>Advanced audio dialog and generation with Gemini 2.5</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-03">2025-06-03</time>
+					|
+					<a href="https://deepmind.google" target="_blank">deepmind.google</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/how-netflix-runs-on-java target="_blank">
+					<h2>How Netflix Runs on Java?</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-03">2025-06-03</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/06/meta-constellation-partner-clean-energy-project/ target="_blank">
+					<h2>Meta and Constellation Partner on Clean Energy Project</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-03">2025-06-03</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/06/03/1117685/inside-the-tedious-effort-to-tally-ais-energy-appetite/ target="_blank">
+					<h2>Inside the effort to tally AI’s energy appetite</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-03">2025-06-03</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/smolvla target="_blank">
+					<h2>SmolVLA: Efficient Vision-Language-Action Model trained on Lerobot Community Data</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-03">2025-06-03</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/vllm-colocate target="_blank">
+					<h2>No GPU left behind: Unlocking Efficiency with Co-located vLLM in TRL</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-03">2025-06-03</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-aurora-dsql-mcp-servers-amazon-fsx-ai-on-eks-and-more-june-2-2025/ target="_blank">
+					<h2>AWS Weekly Roundup: Amazon Aurora DSQL, MCP Servers, Amazon FSx, AI on EKS, and more (June 2, 2025)</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-06-02">2025-06-02</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/ep165-ai-agent-versus-mcp target="_blank">
+					<h2>EP165: AI Agent versus MCP</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-31">2025-05-31</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/05/30/1117440/fueling-seamless-ai-at-scale/ target="_blank">
+					<h2>Fueling seamless AI at scale</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-30">2025-05-30</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2025/05/30/1117551/this-benchmark-used-reddits-aita-to-test-how-much-ai-models-suck-up-to-us/ target="_blank">
+					<h2>This benchmark used Reddit’s AITA to test how much AI models suck up to us</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-30">2025-05-30</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/amazon-fsx-for-lustre-adds-new-storage-class-with-the-lowest-cost-and-only-fully-elastic-lustre-file-storage/ target="_blank">
+					<h2>Amazon FSx for Lustre launches new storage class with the lowest-cost and only fully elastic Lustre ﬁle storage</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-29">2025-05-29</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/enhance-ai-assisted-development-with-amazon-ecs-amazon-eks-and-aws-serverless-mcp-server/ target="_blank">
+					<h2>Enhance AI-assisted development with Amazon ECS, Amazon EKS and AWS Serverless MCP server</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-29">2025-05-29</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/05/new-music-layout-sticker-options-whatsapp-status/ target="_blank">
+					<h2>New Music, Layout and Sticker Options in WhatsApp Status</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-29">2025-05-29</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/a-deep-dive-into-http-from-http-1 target="_blank">
+					<h2>A Deep Dive into HTTP: From HTTP 1 to HTTP 3</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-29">2025-05-29</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/index/wix target="_blank">
+					<h2>Creating websites in minutes with AI Website Builder</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-29">2025-05-29</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/how-amazon-key-opens-100-million target="_blank">
+					<h2>How Amazon Key Opens 100 Million Doors Every Year</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-28">2025-05-28</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/05/helping-indian-brands-grow-their-cross-border-business-with-meta-ad-tools/ target="_blank">
+					<h2>Helping Indian Brands Grow Their Cross Border Business With Meta Ad Tools</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-28">2025-05-28</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/structured-codeagent target="_blank">
+					<h2>CodeAgents &#43; Structure: A Better Way to Execute Actions</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-28">2025-05-28</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/amazon-aurora-dsql-is-now-generally-available/ target="_blank">
+					<h2>Amazon Aurora DSQL, the fastest serverless distributed SQL database is now generally available</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-27">2025-05-27</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://www.anthropic.com/news/reed-hastings target="_blank">
+					<h2>Reed Hastings appointed to Anthropic’s board of directors</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-27">2025-05-27</time>
+					|
+					<a href="https://anthropic.com" target="_blank">anthropic.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/how-uber-eats-handles-billions-of target="_blank">
+					<h2>How Uber Eats Handles Billions of Daily Search Queries</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-27">2025-05-27</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-4-in-amazon-bedrock-eks-dashboard-community-events-and-more-may-26-2025/ target="_blank">
+					<h2>AWS Weekly Roundup: Claude 4 in Amazon Bedrock, EKS Dashboard, community events, and more (May 26, 2025)</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-26">2025-05-26</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://about.fb.com/news/2025/05/thailand-mdes-pdpc-meta-privacy-education-partnership/ target="_blank">
+					<h2>Thailand’s Ministry of Digital Economy and Society (MDES) and Personal Data Protection Committee (PDPC) Launch Privacy Education Campaign in Partnership with Meta</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-26">2025-05-26</time>
+					|
+					<a href="https://about.fb.com" target="_blank">about.fb.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/liger-grpo target="_blank">
+					<h2>🐯 Liger GRPO meets TRL</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-25">2025-05-25</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/ep164-jwt-simply-explained target="_blank">
+					<h2>EP164: JWT Simply Explained</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-24">2025-05-24</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/index/o3-o4-mini-system-card-addendum-operator-o3 target="_blank">
+					<h2>Addendum to OpenAI o3 and o4-mini system card: OpenAI o3 Operator</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-23">2025-05-23</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/dell-ai-applications target="_blank">
+					<h2>Dell Enterprise Hub is all you need to build AI on premises</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-23">2025-05-23</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://huggingface.co/blog/python-tiny-agents target="_blank">
+					<h2>Tiny Agents in Python: a MCP-powered agent in ~70 lines of code</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-23">2025-05-23</time>
+					|
+					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/index/openai-deutschland target="_blank">
+					<h2>OpenAI Deutschland</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-22">2025-05-22</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://aws.amazon.com/blogs/aws/claude-opus-4-anthropics-most-powerful-model-for-coding-is-now-in-amazon-bedrock/ target="_blank">
+					<h2>Introducing Claude 4 in Amazon Bedrock, the most powerful models for coding from Anthropic</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-22">2025-05-22</time>
+					|
+					<a href="https://aws.amazon.com" target="_blank">aws.amazon.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.langchain.dev/why-langgraph-platform/ target="_blank">
+					<h2>Why do I need LangGraph Platform for agent deployment?</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-22">2025-05-22</time>
+					|
+					<a href="https://blog.langchain.dev" target="_blank">blog.langchain.dev</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://blog.bytebytego.com/p/api-gateway-vs-service-mesh-which target="_blank">
+					<h2>API Gateway vs Service Mesh - Which One Do You Need</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-22">2025-05-22</time>
+					|
+					<a href="https://blog.bytebytego.com" target="_blank">blog.bytebytego.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/index/coderabbit target="_blank">
+					<h2> Shipping code faster with o3, o4-mini, and GPT-4.1</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-22">2025-05-22</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/index/introducing-stargate-uae target="_blank">
+					<h2>Introducing Stargate UAE</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2025-05-22">2025-05-22</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
+				</small>
+
+			</li>
+			
+		</ol>
+	</main>
+	<footer>
+		<p>Last Updated On: Monday, 2025-06-16 03:52:32</p>
+		<p>This page aggregate the following feeds:</p>
+		<div class="feed-list">
+			
+			<div>
+				<a href="https://www.technologyreview.com" target="_blank">Artificial intelligence – MIT Technology Review</a>
+			</div>
+			
+			<div>
+				<a href="https://www.aitrends.com/" target="_blank">AI Trends</a>
+			</div>
+			
+			<div>
+				<a href="https://openai.com/news" target="_blank">OpenAI News</a>
+			</div>
+			
+			<div>
+				<a href="https://huggingface.co/blog" target="_blank">Hugging Face - Blog</a>
+			</div>
+			
+			<div>
+				<a href="https://blogs.microsoft.com/ai/" target="_blank">The AI Blog</a>
+			</div>
+			
+			<div>
+				<a href="https://aws.amazon.com/blogs/aws/" target="_blank">AWS News Blog</a>
+			</div>
+			
+			<div>
+				<a href="https://stability.ai/news/" target="_blank">News - Stability AI</a>
+			</div>
+			
+			<div>
+				<a href="http://nvidianews.nvidia.com" target="_blank">News Releases - NVIDIA Newsroom</a>
+			</div>
+			
+			<div>
+				<a href="https://www.anthropic.com/news" target="_blank">Anthropic News</a>
+			</div>
+			
+			<div>
+				<a href="https://blog.langchain.dev/" target="_blank">LangChain Blog</a>
+			</div>
+			
+			<div>
+				<a href="https://blog.bytebytego.com" target="_blank">ByteByteGo Newsletter</a>
+			</div>
+			
+			<div>
+				<a href="" target="_blank">Meta Newsroom</a>
+			</div>
+			
+			<div>
+				<a href="https://www.alignment.org/" target="_blank">Alignment Research Center</a>
+			</div>
+			
+			<div>
+				<a href="http://rss.arxiv.org/rss/cs.AI" target="_blank">cs.AI updates on arXiv.org</a>
+			</div>
+			
+			<div>
+				<a href="https://deepmind.google/discover/blog/" target="_blank">Google DeepMind Blog</a>
+			</div>
+			
+			<div>
+				<a href="https://deepmind.google/discover/blog/" target="_blank">Google DeepMind Blog</a>
+			</div>
+			
+		</div>
+	</footer>
+</body>
+
+</html>
