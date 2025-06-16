@@ -1,0 +1,32 @@
+name: Tinyfeed build & deploy
+on:
+  schedule:           # runs every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # manual trigger button
+  push:              # trigger on push to main branch
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tinyfeed
+        run: |
+          curl -sL https://github.com/AnandChowdhary/tinyfeed/releases/latest/download/tinyfeed-linux-amd64 \
+            -o /usr/local/bin/tinyfeed && chmod +x /usr/local/bin/tinyfeed
+
+      - name: Generate site (last 30 days)
+        run: |
+          tinyfeed \
+            --input feeds.txt \
+            --output public \
+            --max-age 30
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public 

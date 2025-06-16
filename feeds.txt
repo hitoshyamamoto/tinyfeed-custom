@@ -1,0 +1,58 @@
+# Add your RSS feeds here, one per line
+# Example:
+# https://news.ycombinator.com/rss
+# https://www.reddit.com/r/programming/.rss
+# https://github.blog/feed/ 
+
+# AI and Technology News Feeds
+
+# Major LLM Providers
+# AWS News
+https://aws.amazon.com/blogs/aws/feed/
+
+# LangChain Blog
+https://blog.langchain.dev/rss/
+
+# ByteByteGo Blog
+https://blog.bytebytego.com/feed
+
+# Anthropic News
+https://rsshub.app/anthropic/news
+
+# OpenAI Blog
+https://openai.com/news/rss.xml
+
+# Additional LLM Providers and AI News
+# Google AI Blog
+https://deepmind.google/blog/rss.xml
+
+# Microsoft AI Blog
+https://blogs.microsoft.com/ai/feed/
+
+# Meta AI Research
+https://about.fb.com/feed/
+
+# NVIDIA AI Blog
+https://nvidianews.nvidia.com/releases.xml
+
+# Hugging Face Blog
+https://huggingface.co/blog/feed.xml
+
+# Stability AI Blog
+https://stability.ai/news/rss.xml
+
+# AI Research and News
+# arXiv AI Papers
+http://export.arxiv.org/rss/cs.AI
+
+# MIT Technology Review - AI
+https://www.technologyreview.com/topic/artificial-intelligence/feed
+
+# AI Trends
+https://www.aitrends.com/feed/
+
+# DeepMind Blog
+https://deepmind.com/blog/feed/basic/
+
+# AI Alignment
+https://www.alignment.org/blog/feed/ 
