@@ -25,7 +25,7 @@ jobs:
 
       - name: Generate site (last 30 days)
         run: |
-          tinyfeed --input feeds.txt --output public --limit 30
+          tinyfeed --input feeds.txt --output public
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
