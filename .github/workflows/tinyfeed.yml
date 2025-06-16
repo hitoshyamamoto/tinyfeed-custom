@@ -23,9 +23,18 @@ jobs:
           echo "Primeiras linhas do arquivo (pode ser binário):"
           head -n 5 /usr/local/bin/tinyfeed || true
 
-      - name: Generate site (last 30 days)
+      - name: Create output directory
+        run: mkdir -p public
+
+      - name: Generate site
         run: |
-          tinyfeed --input feeds.txt --output public
+          tinyfeed \
+            --input feeds.txt \
+            --output public/index.html \
+            --limit 100 \
+            --limit-per-feed 20 \
+            --name "AI News Feed" \
+            --description "A collection of AI and technology news feeds"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
