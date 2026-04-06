@@ -4,15 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<title>AI News Feed</title>
 
 	<meta http-equiv="Content-Security-Policy" content="
 		default-src 'none';
 		base-uri 'self';
 		img-src 'self' data: ;
-		style-src 'nonce-kdpmOuW6f0RHx30CDbT_F095EiWQKZbyzucaeJUIG4c9nfGCd1lObHo9D9C-xxD22PITV5b3DvYGgQZljhLEpp4Qa4qlpeJOjr6W1nis12X6QCJFNCk7-mVGngF4W8ClDGr5mFvWZUR-oNxTokNeO3_fFIWWQYUJQJx7GicIvZcQc6SM2oLaFLrMSdTCoU3PQDeL_jHtfOHyqpLJ8QMVNQJCsxq7HVChnw8z1IovvXMVPSUqI-5PHJpV-elVKsQuHB9-mpm_byho4n01QWylOmDuZW5rOr2UBHqmxX5DDZbRTqr64F5V-FIJyvd0jY5aJWa6DwInUIowayIlpszldg==' ;
-		script-src 'nonce-kdpmOuW6f0RHx30CDbT_F095EiWQKZbyzucaeJUIG4c9nfGCd1lObHo9D9C-xxD22PITV5b3DvYGgQZljhLEpp4Qa4qlpeJOjr6W1nis12X6QCJFNCk7-mVGngF4W8ClDGr5mFvWZUR-oNxTokNeO3_fFIWWQYUJQJx7GicIvZcQc6SM2oLaFLrMSdTCoU3PQDeL_jHtfOHyqpLJ8QMVNQJCsxq7HVChnw8z1IovvXMVPSUqI-5PHJpV-elVKsQuHB9-mpm_byho4n01QWylOmDuZW5rOr2UBHqmxX5DDZbRTqr64F5V-FIJyvd0jY5aJWa6DwInUIowayIlpszldg==' 'strict-dynamic' ;
+		style-src 'nonce-lUEDIls5TkmZ8BTTVxoaa5W_eygZ2pk2RirkHybMn9mrLbdt7UVVGcVrxp9lR7SanUdcKxeF7s9VySDJqqsTFRq6KbGf0jfpUWvfwwcpxixKo2fXnB2msc4IOTaOl-2V9emBDTZhCZnQdGsW1lpulDJUiY7DW70iYE2eWly0y0L9pJqRB6mHCpSVXD5h3TtlTlS9egyDMxmhT0akfPLYzWB8GJoNGWHiZNKRoG0TE1mNcmmJT1GZa34oQaBFHjQEhR5q4PJ_vfXKCo_zpb2xeO5NGJjuhl_o1qFqeh_L3tLGcs75_DPJes7dDZDkGv0NHVWulVbjB_MfhW4tcYUIMA==' ;
+		script-src 'nonce-lUEDIls5TkmZ8BTTVxoaa5W_eygZ2pk2RirkHybMn9mrLbdt7UVVGcVrxp9lR7SanUdcKxeF7s9VySDJqqsTFRq6KbGf0jfpUWvfwwcpxixKo2fXnB2msc4IOTaOl-2V9emBDTZhCZnQdGsW1lpulDJUiY7DW70iYE2eWly0y0L9pJqRB6mHCpSVXD5h3TtlTlS9egyDMxmhT0akfPLYzWB8GJoNGWHiZNKRoG0TE1mNcmmJT1GZa34oQaBFHjQEhR5q4PJ_vfXKCo_zpb2xeO5NGJjuhl_o1qFqeh_L3tLGcs75_DPJes7dDZDkGv0NHVWulVbjB_MfhW4tcYUIMA==' 'strict-dynamic' ;
     ">
 	<meta name="application-name" content="tinyfeed">
 	<meta name="application-source" content="https://github.com/TheBigRoomXXL/tinyfeed">
@@ -20,7 +19,7 @@
 	<meta name="description" content="RSS, Atom and JSON feeds aggregator">
 	<meta name="referrer" content="same-origin">
 
-	<style nonce="kdpmOuW6f0RHx30CDbT_F095EiWQKZbyzucaeJUIG4c9nfGCd1lObHo9D9C-xxD22PITV5b3DvYGgQZljhLEpp4Qa4qlpeJOjr6W1nis12X6QCJFNCk7-mVGngF4W8ClDGr5mFvWZUR-oNxTokNeO3_fFIWWQYUJQJx7GicIvZcQc6SM2oLaFLrMSdTCoU3PQDeL_jHtfOHyqpLJ8QMVNQJCsxq7HVChnw8z1IovvXMVPSUqI-5PHJpV-elVKsQuHB9-mpm_byho4n01QWylOmDuZW5rOr2UBHqmxX5DDZbRTqr64F5V-FIJyvd0jY5aJWa6DwInUIowayIlpszldg==">
+	<style nonce="lUEDIls5TkmZ8BTTVxoaa5W_eygZ2pk2RirkHybMn9mrLbdt7UVVGcVrxp9lR7SanUdcKxeF7s9VySDJqqsTFRq6KbGf0jfpUWvfwwcpxixKo2fXnB2msc4IOTaOl-2V9emBDTZhCZnQdGsW1lpulDJUiY7DW70iYE2eWly0y0L9pJqRB6mHCpSVXD5h3TtlTlS9egyDMxmhT0akfPLYzWB8GJoNGWHiZNKRoG0TE1mNcmmJT1GZa34oQaBFHjQEhR5q4PJ_vfXKCo_zpb2xeO5NGJjuhl_o1qFqeh_L3tLGcs75_DPJes7dDZDkGv0NHVWulVbjB_MfhW4tcYUIMA==">
 		:root {
 			color-scheme: dark light;
 
@@ -135,6 +134,19 @@
 	</header>
 	<main>
 		<ol>
+			
+			<li>
+				<a href=https://www.technologyreview.com/2026/04/06/1135118/ai-online-seller-alibaba-accio/ target="_blank">
+					<h2>AI is changing how small online sellers decide what to make</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2026-04-06">2026-04-06</time>
+					|
+					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
+				</small>
+
+			</li>
 			
 			<li>
 				<a href=https://arxiv.org/abs/2604.02334 target="_blank">
@@ -782,6 +794,19 @@
 					<time datetime="2026-04-06">2026-04-06</time>
 					|
 					<a href="https://arxiv.org" target="_blank">arxiv.org</a>
+				</small>
+
+			</li>
+			
+			<li>
+				<a href=https://openai.com/index/industrial-policy-for-the-intelligence-age target="_blank">
+					<h2>Industrial policy for the Intelligence Age</h2>
+				</a>
+				<br>
+				<small>
+					<time datetime="2026-04-06">2026-04-06</time>
+					|
+					<a href="https://openai.com" target="_blank">openai.com</a>
 				</small>
 
 			</li>
@@ -1866,19 +1891,6 @@
 			</li>
 			
 			<li>
-				<a href=https://www.technologyreview.com/2026/03/23/1134491/the-bay-areas-animal-welfare-movement-wants-to-recruit-ai/ target="_blank">
-					<h2>The Bay Area’s animal welfare movement wants to recruit AI</h2>
-				</a>
-				<br>
-				<small>
-					<time datetime="2026-03-23">2026-03-23</time>
-					|
-					<a href="https://technologyreview.com" target="_blank">technologyreview.com</a>
-				</small>
-
-			</li>
-			
-			<li>
 				<a href=https://openai.com/index/creating-with-sora-safely target="_blank">
 					<h2>Creating with Sora Safely</h2>
 				</a>
@@ -2230,8 +2242,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/japan-teen-safety-blueprint target="_blank">
-					<h2>OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first</h2>
+				<a href=https://openai.com/index/introducing-gpt-5-4-mini-and-nano target="_blank">
+					<h2>Introducing GPT-5.4 mini and nano</h2>
 				</a>
 				<br>
 				<small>
@@ -2243,8 +2255,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/introducing-gpt-5-4-mini-and-nano target="_blank">
-					<h2>Introducing GPT-5.4 mini and nano</h2>
+				<a href=https://openai.com/index/japan-teen-safety-blueprint target="_blank">
+					<h2>OpenAI Japan announces Japan Teen Safety Blueprint to put teen safety first</h2>
 				</a>
 				<br>
 				<small>
@@ -2659,8 +2671,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/gpt-5-4-thinking-system-card target="_blank">
-					<h2>GPT-5.4 Thinking System Card</h2>
+				<a href=https://openai.com/index/introducing-gpt-5-4 target="_blank">
+					<h2>Introducing GPT-5.4</h2>
 				</a>
 				<br>
 				<small>
@@ -2672,8 +2684,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/introducing-gpt-5-4 target="_blank">
-					<h2>Introducing GPT-5.4</h2>
+				<a href=https://openai.com/index/gpt-5-4-thinking-system-card target="_blank">
+					<h2>GPT-5.4 Thinking System Card</h2>
 				</a>
 				<br>
 				<small>
@@ -2789,8 +2801,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/understanding-ai-and-learning-outcomes target="_blank">
-					<h2>Understanding AI and learning outcomes</h2>
+				<a href=https://openai.com/index/axios-allison-murphy target="_blank">
+					<h2>How Axios uses AI to help deliver high-impact local journalism </h2>
 				</a>
 				<br>
 				<small>
@@ -2802,8 +2814,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/axios-allison-murphy target="_blank">
-					<h2>How Axios uses AI to help deliver high-impact local journalism </h2>
+				<a href=https://openai.com/index/understanding-ai-and-learning-outcomes target="_blank">
+					<h2>Understanding AI and learning outcomes</h2>
 				</a>
 				<br>
 				<small>
@@ -2854,8 +2866,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/gpt-5-3-instant-system-card target="_blank">
-					<h2>GPT-5.3 Instant System Card</h2>
+				<a href=https://openai.com/index/gpt-5-3-instant target="_blank">
+					<h2>GPT-5.3 Instant: Smoother, more useful everyday conversations</h2>
 				</a>
 				<br>
 				<small>
@@ -2867,8 +2879,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/gpt-5-3-instant target="_blank">
-					<h2>GPT-5.3 Instant: Smoother, more useful everyday conversations</h2>
+				<a href=https://openai.com/index/gpt-5-3-instant-system-card target="_blank">
+					<h2>GPT-5.3 Instant System Card</h2>
 				</a>
 				<br>
 				<small>
@@ -2906,8 +2918,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/continuing-microsoft-partnership target="_blank">
-					<h2>Joint Statement from OpenAI and Microsoft</h2>
+				<a href=https://openai.com/index/amazon-partnership target="_blank">
+					<h2>OpenAI and Amazon announce strategic partnership</h2>
 				</a>
 				<br>
 				<small>
@@ -2945,8 +2957,8 @@
 			</li>
 			
 			<li>
-				<a href=https://openai.com/index/amazon-partnership target="_blank">
-					<h2>OpenAI and Amazon announce strategic partnership</h2>
+				<a href=https://openai.com/index/continuing-microsoft-partnership target="_blank">
+					<h2>Joint Statement from OpenAI and Microsoft</h2>
 				</a>
 				<br>
 				<small>
@@ -3044,19 +3056,6 @@
 					<time datetime="2026-02-26">2026-02-26</time>
 					|
 					<a href="https://huggingface.co" target="_blank">huggingface.co</a>
-				</small>
-
-			</li>
-			
-			<li>
-				<a href=https://openai.com/index/disrupting-malicious-ai-uses target="_blank">
-					<h2>Disrupting malicious uses of AI | February 2026</h2>
-				</a>
-				<br>
-				<small>
-					<time datetime="2026-02-25">2026-02-25</time>
-					|
-					<a href="https://openai.com" target="_blank">openai.com</a>
 				</small>
 
 			</li>
@@ -5080,23 +5079,15 @@
 	</main>
 	<footer>
 		<p>Last Updated On:
-			<time id="update-at" datetime="2026-04-06T07:15:21Z">
-				Monday, 2026-04-06 07:15:21
+			<time id="update-at" datetime="2026-04-06T12:43:27Z">
+				Monday, 2026-04-06 12:43:27
 			</time>
 		</p>
 		<p>This page aggregate the following feeds:</p>
 		<div class="feed-list">
 			
 			<div>
-				<a href="https://huggingface.co/blog" target="_blank">Hugging Face - Blog</a>
-			</div>
-			
-			<div>
-				<a href="https://www.technologyreview.com" target="_blank">Artificial intelligence – MIT Technology Review</a>
-			</div>
-			
-			<div>
-				<a href="https://nvidianews.nvidia.com" target="_blank">News Releases - NVIDIA Newsroom</a>
+				<a href="" target="_blank">Meta Newsroom</a>
 			</div>
 			
 			<div>
@@ -5104,7 +5095,7 @@
 			</div>
 			
 			<div>
-				<a href="https://www.alignment.org/" target="_blank">Alignment Research Center</a>
+				<a href="https://www.technologyreview.com" target="_blank">Artificial intelligence – MIT Technology Review</a>
 			</div>
 			
 			<div>
@@ -5112,7 +5103,19 @@
 			</div>
 			
 			<div>
-				<a href="https://www.aitrends.com/" target="_blank">AI Trends</a>
+				<a href="http://rss.arxiv.org/rss/cs.AI" target="_blank">cs.AI updates on arXiv.org</a>
+			</div>
+			
+			<div>
+				<a href="https://nvidianews.nvidia.com" target="_blank">News Releases - NVIDIA Newsroom</a>
+			</div>
+			
+			<div>
+				<a href="https://www.alignment.org/" target="_blank">Alignment Research Center</a>
+			</div>
+			
+			<div>
+				<a href="https://huggingface.co/blog" target="_blank">Hugging Face - Blog</a>
 			</div>
 			
 			<div>
@@ -5120,15 +5123,11 @@
 			</div>
 			
 			<div>
-				<a href="http://rss.arxiv.org/rss/cs.AI" target="_blank">cs.AI updates on arXiv.org</a>
+				<a href="https://openai.com/news" target="_blank">OpenAI News</a>
 			</div>
 			
 			<div>
-				<a href="" target="_blank">Meta Newsroom</a>
-			</div>
-			
-			<div>
-				<a href="https://deepmind.google/blog/" target="_blank">Google DeepMind News</a>
+				<a href="https://www.aitrends.com/" target="_blank">AI Trends</a>
 			</div>
 			
 			<div>
@@ -5136,7 +5135,7 @@
 			</div>
 			
 			<div>
-				<a href="https://openai.com/news" target="_blank">OpenAI News</a>
+				<a href="https://deepmind.google/blog/" target="_blank">Google DeepMind News</a>
 			</div>
 			
 			<div>
@@ -5147,7 +5146,7 @@
 	</footer>
 </body>
 
-<script type="module" nonce="kdpmOuW6f0RHx30CDbT_F095EiWQKZbyzucaeJUIG4c9nfGCd1lObHo9D9C-xxD22PITV5b3DvYGgQZljhLEpp4Qa4qlpeJOjr6W1nis12X6QCJFNCk7-mVGngF4W8ClDGr5mFvWZUR-oNxTokNeO3_fFIWWQYUJQJx7GicIvZcQc6SM2oLaFLrMSdTCoU3PQDeL_jHtfOHyqpLJ8QMVNQJCsxq7HVChnw8z1IovvXMVPSUqI-5PHJpV-elVKsQuHB9-mpm_byho4n01QWylOmDuZW5rOr2UBHqmxX5DDZbRTqr64F5V-FIJyvd0jY5aJWa6DwInUIowayIlpszldg==">
+<script type="module" nonce="lUEDIls5TkmZ8BTTVxoaa5W_eygZ2pk2RirkHybMn9mrLbdt7UVVGcVrxp9lR7SanUdcKxeF7s9VySDJqqsTFRq6KbGf0jfpUWvfwwcpxixKo2fXnB2msc4IOTaOl-2V9emBDTZhCZnQdGsW1lpulDJUiY7DW70iYE2eWly0y0L9pJqRB6mHCpSVXD5h3TtlTlS9egyDMxmhT0akfPLYzWB8GJoNGWHiZNKRoG0TE1mNcmmJT1GZa34oQaBFHjQEhR5q4PJ_vfXKCo_zpb2xeO5NGJjuhl_o1qFqeh_L3tLGcs75_DPJes7dDZDkGv0NHVWulVbjB_MfhW4tcYUIMA==">
 	const updatedAtElement = document.getElementById("update-at");
 	const date = new Date(updatedAtElement.dateTime);
 	updatedAtElement.innerText = date.toLocaleString(undefined, {
